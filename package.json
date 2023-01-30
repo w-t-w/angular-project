@@ -1,0 +1,23 @@
+{
+  "name": "angular-project",
+  "version": "0.0.1",
+  "description": "angular project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w-t-w/angular-project.git"
+  },
+  "keywords": [
+    "angular",
+    "project"
+  ],
+  "author": "wtw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/w-t-w/angular-project/issues"
+  },
+  "homepage": "https://github.com/w-t-w/angular-project#readme"
+}
