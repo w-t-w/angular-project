@@ -1,0 +1,34 @@
+<!--<p>{{title}}</p>-->
+<!--<span>{{num}}</span>-->
+<!--<div title="这是一个demo的title">-->
+<!--demo title-->
+<!--</div>-->
+<!--<div [title]="title">-->
+<!--  demo title-->
+<!--</div>-->
+<!--<div [innerHTML]="content">-->
+<!--</div>-->
+<!--<ul>-->
+<!--  <li *ngFor="let item of arr">-->
+<!--    {{item}}-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<span>-->
+<!--  {{o.username}}&#45;&#45;{{o.age}}-->
+<!--</span>-->
+<!--<ol>-->
+<!--  <li *ngFor="let item of arr">-->
+<!--    {{item.username}}&#45;&#45;{{item.age}}-->
+<!--  </li>-->
+<!--</ol>-->
+<ul>
+  <li *ngFor="let item of arr">
+    <h2>{{item.className}}</h2>
+    <hr />
+    <ol>
+      <li *ngFor="let i of item.list">
+        {{i.username}}--{{i.age}}
+      </li>
+    </ol>
+  </li>
+</ul>
