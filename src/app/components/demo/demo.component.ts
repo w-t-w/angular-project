@@ -63,4 +63,8 @@ export class DemoComponent {
       age: 26
     }]
   }];
+  // srcUrl: string = 'assets/luffy.jpeg';
+  flags:boolean = false;
+  // flags:boolean = false;
+  // orderStatus: number = 3;
 }

@@ -21,14 +21,77 @@
 <!--    {{item.username}}&#45;&#45;{{item.age}}-->
 <!--  </li>-->
 <!--</ol>-->
+<!--<ul>-->
+<!--  <li *ngFor="let item of arr">-->
+<!--    <h2>{{item.className}}</h2>-->
+<!--    <hr />-->
+<!--    <ol>-->
+<!--      <li *ngFor="let i of item.list">-->
+<!--        {{i.username}}&#45;&#45;{{i.age}}-->
+<!--      </li>-->
+<!--    </ol>-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<img src="assets/zero.jpeg" />-->
+<!--<img [src]="srcUrl"/>-->
+<!--<ul>-->
+<!--  <li *ngFor="let item of arr;let key = index;">-->
+<!--    <h3>{{key + 1}} {{item.className}}</h3>-->
+<!--    <ul>-->
+<!--      <li *ngFor="let count of item.list;let i = index;">-->
+<!--        {{i + 1}} {{count.username}} &#45;&#45; {{count.age}}-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<div class="box red" *ngIf="flags">-->
+<!--</div>-->
+<!--<div class="box yellow" *ngIf="!flags">-->
+<!--</div>-->
+<!--<ul>-->
+<!--  <li *ngFor="let item of arr;let key = index;">-->
+<!--    <h4>{{key}} {{item.className}}</h4>-->
+<!--    <ul>-->
+<!--      <li *ngFor="let count of item.list;let i = index;">-->
+<!--        <span class="red" *ngIf="i === 0">{{i}} {{count.username}}&#45;&#45;{{count.age}}</span>-->
+<!--        <span class="yellow" *ngIf="i === 1">{{i}} {{count.username}}&#45;&#45;{{count.age}}</span>-->
+<!--        <span class="blue" *ngIf="i === 2">{{i}} {{count.username}}&#45;&#45;{{count.age}}</span>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<div [ngSwitch]="orderStatus">-->
+<!--  <p *ngSwitchCase="0">-->
+<!--    待付款-->
+<!--  </p>-->
+<!--  <p *ngSwitchCase="1">-->
+<!--    待送出-->
+<!--  </p>-->
+<!--  <p *ngSwitchCase="2">-->
+<!--    待确认-->
+<!--  </p>-->
+<!--  <p *ngSwitchCase="3">-->
+<!--    待评价-->
+<!--  </p>-->
+<!--  <p *ngSwitchCase="4">-->
+<!--    已关闭-->
+<!--  </p>-->
+<!--  <p *ngSwitchCase="5">-->
+<!--    已完成-->
+<!--  </p>-->
+<!--  <p *ngSwitchCase="6">-->
+<!--    已退款-->
+<!--  </p>-->
+<!--</div>-->
 <ul>
-  <li *ngFor="let item of arr">
-    <h2>{{item.className}}</h2>
-    <hr />
-    <ol>
-      <li *ngFor="let i of item.list">
-        {{i.username}}--{{i.age}}
+  <li *ngFor="let item of arr;let key = index;">
+    <h4>{{key + 1}} ----- {{item.className}}</h4>
+    <ul>
+      <!--      <li *ngFor="let count of item.list;let countKey = index;" [ngClass]="{'red': flags, 'blue': !flags}">-->
+      <li *ngFor="let count of item.list;let countKey = index;"
+          [ngStyle]="{'backgroundColor': countKey === 0 ? 'red' : countKey === 1 ? 'blue' : 'yellow'}">
+        {{countKey + 1}} ----- {{count.username}} : {{count.age}}
       </li>
-    </ol>
+    </ul>
   </li>
 </ul>
