@@ -83,15 +83,34 @@
 <!--    已退款-->
 <!--  </p>-->
 <!--</div>-->
-<ul>
-  <li *ngFor="let item of arr;let key = index;">
-    <h4>{{key + 1}} ----- {{item.className}}</h4>
-    <ul>
-      <!--      <li *ngFor="let count of item.list;let countKey = index;" [ngClass]="{'red': flags, 'blue': !flags}">-->
-      <li *ngFor="let count of item.list;let countKey = index;"
-          [ngStyle]="{'backgroundColor': countKey === 0 ? 'red' : countKey === 1 ? 'blue' : 'yellow'}">
-        {{countKey + 1}} ----- {{count.username}} : {{count.age}}
-      </li>
-    </ul>
-  </li>
-</ul>
+<!--<ul>-->
+<!--  <li *ngFor="let item of arr;let key = index;">-->
+<!--    <h4>{{key + 1}} -&#45;&#45;&#45;&#45; {{item.className}}</h4>-->
+<!--    <ul>-->
+<!--      &lt;!&ndash;      <li *ngFor="let count of item.list;let countKey = index;" [ngClass]="{'red': flags, 'blue': !flags}">&ndash;&gt;-->
+<!--      <li *ngFor="let count of item.list;let countKey = index;"-->
+<!--          [ngStyle]="{'backgroundColor': countKey === 0 ? 'red' : countKey === 1 ? 'blue' : 'yellow'}">-->
+<!--        {{countKey + 1}} -&#45;&#45;&#45;&#45; {{count.username}} : {{count.age}}-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<time>-->
+<!--  {{date | date: 'yyyy-MM-dd HH:mm:ss'}}-->
+<!--</time>-->
+<!--<time>-->
+<!--  {{date | date: 'yyyy-MM-dd HH:mm:ss'}}-->
+<!--</time>-->
+<!--<span>-->
+<!--  {{title}}-->
+<!--</span>-->
+<!--<button (click)="getData()">获取标题</button>-->
+<!--<button (click)="setData('修改数据!')">修改标题</button>-->
+<!--<input type="text" (keydown)="onKeyDown($event)" />-->
+<!--<br />-->
+<!--<br />-->
+<!--<input type="text" (keyup)="onKeyUp($event)"/>-->
+<!--<input type="text" [(ngModel)]="keyboard" />-->
+<!--{{keyboard}}-->
+<!--<button (click)="onGetValue()">获取数据</button>-->
+<!--<button (click)="onSetValue('修改后的 input 输入框内容!')">修改数据</button>-->
