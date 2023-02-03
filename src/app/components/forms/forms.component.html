@@ -1,1 +1,25 @@
-
+<form class="exec-form">
+  <fieldset>
+    <legend>{{title}}</legend>
+    <div class="exec-form-group">
+      <div class="exec-form-group-row">
+        <label for="username">用户名:</label>
+        <input id="username" name="username" class="exec-form-group-row-username" type="text" [(ngModel)]="userInfo.username"/>
+      </div>
+      <div class="exec-form-group-row">
+        <label for="age">年  龄:</label>
+        <input id="age" name="age" class="exec-form-group-row-age" type="text" [(ngModel)]="userInfo.age"/>
+      </div>
+      <div class="exec-form-group-row">
+        <label for="gender">性别 :</label>
+        <input id="gender" name="gender" class="exec-form-group-row-gender" type="radio" value="1" [(ngModel)]="userInfo.gender"/>
+      </div>
+      <div class="exec-form-group">
+        <input type="submit" class="exec-form-group-row-submit" (click)="onSubmit($event)"/>
+      </div>
+    </div>
+  </fieldset>
+</form>
+<div class="result">
+  {{userInfo | json}}
+</div>
