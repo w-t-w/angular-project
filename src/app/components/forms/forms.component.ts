@@ -3,7 +3,16 @@ import {Component} from '@angular/core';
 interface UserInfo {
   username: string,
   age: number | null,
-  gender: '1' | '2'
+  gender: '1' | '2',
+  city: Array<string>,
+  useCity: string,
+  hobby: Array<hobbyType>,
+  introduce: string
+}
+
+interface hobbyType {
+  name: string,
+  checked: boolean
 }
 
 @Component({
@@ -16,7 +25,23 @@ export class FormsComponent {
   userInfo: UserInfo = {
     username: '',
     age: null,
-    gender: '1'
+    gender: '1',
+    city: ['北京', '上海', '深圳', '广州', '雄安'],
+    useCity: '上海',
+    hobby: [{
+      name: 'basketball',
+      checked: false
+    }, {
+      name: 'football',
+      checked: false
+    }, {
+      name: 'table tennis',
+      checked: false
+    }, {
+      name: 'volleyball',
+      checked: true
+    }],
+    introduce: ''
   }
 
   onSubmit(e: Event) {

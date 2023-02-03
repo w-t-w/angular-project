@@ -4,15 +4,52 @@
     <div class="exec-form-group">
       <div class="exec-form-group-row">
         <label for="username">用户名:</label>
-        <input id="username" name="username" class="exec-form-group-row-username" type="text" [(ngModel)]="userInfo.username"/>
+        <input id="username" name="username" class="exec-form-group-row-username" type="text"
+               [(ngModel)]="userInfo.username"/>
       </div>
       <div class="exec-form-group-row">
-        <label for="age">年  龄:</label>
+        <label for="age">年 龄:</label>
         <input id="age" name="age" class="exec-form-group-row-age" type="text" [(ngModel)]="userInfo.age"/>
       </div>
       <div class="exec-form-group-row">
-        <label for="gender">性别 :</label>
-        <input id="gender" name="gender" class="exec-form-group-row-gender" type="radio" value="1" [(ngModel)]="userInfo.gender"/>
+        <label for="gender">性别:</label>
+        <div id="gender" class="exec-form-group-row-radio">
+          <label for="man">
+            男:
+          </label>
+          <input id="man" name="gender" class="exec-form-group-row-gender" type="radio" value="1"
+                 [(ngModel)]="userInfo.gender"/>
+          <label for="female">
+            女:
+          </label>
+          <input id="female" name="gender" class="exec-form-group-row-gender" type="radio" value="2"
+                 [(ngModel)]="userInfo.gender"/>
+        </div>
+      </div>
+      <div class="exec-form-group-row">
+        <label for="city">城市:</label>
+        <select id="city" name="useCity" class="exec-form-group-row-city" [(ngModel)]="userInfo.useCity">
+          <option *ngFor="let city of userInfo.city">
+            {{city}}
+          </option>
+        </select>
+      </div>
+      <div class="exec-form-group-row">
+        <label for="hobby">爱好:</label>
+        <div id="hobby" class="exec-form-group-row-checkbox">
+          <div *ngFor="let hobby of userInfo.hobby;let key = index;" class="exec-form-group-row-hobby">
+            <input id="{{'checkbox'+key}}"
+                   type="checkbox"
+                   name="{{hobby.name}}"
+                   [(ngModel)]="hobby.checked"
+                   class="exec-form-group-row-checkedHobby"/>
+            <label for="{{'checkbox'+key}}">{{hobby.name}}</label>
+          </div>
+        </div>
+      </div>
+      <div class="exec-form-group-row">
+        <label for="introduce">自我介绍:</label>
+        <textarea id="introduce" name="introduce" class="exec-form-group-row-introduce" [(ngModel)]="userInfo.introduce"></textarea>
       </div>
       <div class="exec-form-group">
         <input type="submit" class="exec-form-group-row-submit" (click)="onSubmit($event)"/>
